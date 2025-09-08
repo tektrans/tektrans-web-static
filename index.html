@@ -546,7 +546,6 @@
 
          <div class="row">
 
-            {% for crew in crews %}
             <div class="col-md-3 col-sm-3 team-member">
                <div class="effect effects wow fadeInUp">
                   <div class="img">
@@ -554,12 +553,28 @@
                   </div>
                </div>
                <div class="member-info wow fadeInUp">
-                  <h4>{{ crew.name }}</h4>
-                  <h5 class="highlight">{{ crew.position }}</h5>
-                  <p>{{ crew.shortDescription }}</p>
+                  <h4>Yoga Aji Pamoro</h4>
+                  <h5 class="highlight">CEO and Founder</h5>
+                  <p>
+                    Belasan tahun (sejak 2009) pengalaman di dunia teknologi transaksi.
+                  </p>
                </div>
             </div>
-            {% endfor %}
+
+            <div class="col-md-3 col-sm-3 team-member">
+               <div class="effect effects wow fadeInUp">
+                  <div class="img">
+                     <img src="{{ crew.imageUrl }}" class="img-responsive" alt="" />
+                  </div>
+               </div>
+               <div class="member-info wow fadeInUp">
+                  <h4>Adhidarma Hadiwinoto</h4>
+                  <h5 class="highlight">CTO and Founder</h5>
+                  <p>
+                    Lebih dikenal sebagai "adhisimon". Seorang penggemar riset dan pengembangan teknologi.
+                  </p>
+               </div>
+            </div>
 
          </div>
 
