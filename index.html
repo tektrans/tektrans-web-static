@@ -621,29 +621,48 @@
 
          <div class="row features-row wow fadeInUp">
 
-         {% set itemIdx = 0 %}
-         {% for whatWeDoItem in whatWeDoItems %}
-         {% set itemIdxInRow = (itemIdx % 3) %}
+          <div class="col-md-4 col-sm-12 feature-column">
+              <div class="feature-icon">
+                <i class="icon-energy size-2x highlight"></i>
+              </div>
+              <div class="feature-info">
+              <h4>Agile and Rapid Development</h4>
 
-         {% if itemIdx !== 0 and itemIdxInRow === 0 %}
-         </div><div class="row wow fadeInUp">
-         {% endif %}
-
-            <div class="col-md-4 col-sm-12 feature-column">
-               <div class="feature-icon">
-                  <i class="{{ whatWeDoItem.iconClass or 'icon-check-circle'}} size-2x highlight"></i>
-               </div>
-               <div class="feature-info">
-                  <h4>{{ whatWeDoItem.title }}</h4>
-
-                  {% set documentContents = whatWeDoItem.content.document %}
-                  {% set documentChildClassName = 'feature-description' %}
-                  {% include "formatters/document.html.njk" %}
-               </div>
+              <p class="feature-description">
+                Pengembangan dilakukan dengan iterasi cepat secara terus menerus. Hasil dapat dengan cepat dirasakan oleh kustomer. Memungkinkan mengikuti perubahan yang terus berjalan.
+              </p>
             </div>
+          </div>
 
-         {% set itemIdx = itemIdx + 1 %}
-         {% endfor %}
+          <div class="col-md-4 col-sm-12 feature-column">
+            <div class="feature-icon">
+              <i class="icon-eyeglasses size-2x highlight"></i>
+            </div>
+            <div class="feature-info">
+            <h4>Robust Design</h4>
+
+            <p class="feature-description">
+              Dengan berbekal pengalaman kami, kami dapat mendesain impelmentasi sistem sesuai kebutuhan anda.
+            </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-12 feature-column">
+            <div class="feature-icon">
+              <i class="icon-lock-open size-2x highlight"></i>
+            </div>
+            <div class="feature-info">
+              <h4>Modern Environment</h4>
+
+              <p class="feature-description">
+                Produk kami dikembangkan dengan menggunakan tools moderen dan kekinian. Sesuai tren kekinian, kami sangat mempercayai pengembangan menggunakan Node.js dan Golang sehingga aplikasi yang kami kembangkan dapat dibuat secara cepat dan berperforma.
+              </p>
+
+              <p class="feature-description">
+                Kami juga percaya akan penggunaan teknologi opensource yang memungkinkan penerapan teknologi secara efektif dan efisien tanpa ada resiko "vendor lock-in".
+              </p>
+            </div>
+          </div>
 
          </div>
       </div>
