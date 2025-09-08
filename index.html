@@ -803,22 +803,23 @@
             </div>
             <div class="col-md-12 text-center wow fadeInUp">
                <div id="owl-testimonials" class="owl-carousel">
-                  {% for testimony in clientTestimonies %}
-                  <div>
+                  
+                <div>
                      <div class="testimonial">
                         <i class="icon-left ion-quote ion-2x highlight"></i>
-                        <span>{{ testimony.body }}</span>
+                        <span>TEKTRANS dapat diandalkan dalam menyediakan kebutuhan cloud dan interkoneksi VPN kami. Selain itu TEKTRANS juga telah banyak membantu kami memberikan konsultasi penerapan teknologi.</span>
                         <i class="icon-right ion-quote ion-2x highlight"></i>
                      </div>
+
                      <div class="testimonial-name">
-                        <img src="{{ testimony.authorImageUrl }}" alt="client">
-                        <h4 class="white">{{ testimony.authorName }}</h4>
+                        <!-- <img src="{{ testimony.authorImageUrl }}" alt="client"> -->
+                        <h4 class="white">Teteng Jaelani</h4>
                         <a>
-                           {{ testimony.authorPosition }}
+                           Direktur PT Radio Komunikasi Indonesia
                         </a>
                      </div>
                   </div>
-                  {% endfor %}
+
                </div>
             </div>
          </div>
