@@ -1,1 +1,0 @@
-# tektrans-web-static
