@@ -16,9 +16,15 @@
 
 {% include "default-blocks/stylesheets.html.njk" %}
 
-{% if config and config.gtag_id %}
-{% include "default-blocks/google-global-site-tag.html.njk" %}
-{% endif %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ config.gtag_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ config.gtag_id }}');
+</script>
 
 {% block beforeHeadEnd %}
 {% endblock %}
