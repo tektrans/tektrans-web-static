@@ -321,30 +321,91 @@
          </div>
          <div class="row features-row wow fadeInUp">
 
-         {% set itemIdx = 0 %}
-         {% for aboutUsItem in aboutUsItems %}
-         {% set itemIdxInRow = (itemIdx % 3) %}
-         
-         {% if itemIdx !== 0 and itemIdxInRow === 0 %}
-         </div><div class="row wow fadeInUp"> 
-         {% endif %}
+          <div class="col-md-4 col-sm-12 feature-column">
+              <div class="feature-icon">
+                <i class="icon-book-open size-2x highlight"></i>
+                <i class="icon-book-open back-icon"></i>
+              </div>
+              <div class="feature-info">
+                <h4>OPEN SOURCE</h4>
 
-            <div class="col-md-4 col-sm-12 feature-column">
-               <div class="feature-icon">
-                  <i class="{{ aboutUsItem.iconClass }} size-2x highlight"></i>
-                  <i class="{{ aboutUsItem.iconClass }} back-icon"></i>
-               </div>
-               <div class="feature-info">
-                  <h4>{{ aboutUsItem.title }}</h4>
+                <p class="feature-description">
+                  Kami sangat menyukai dan percaya akan penerapan open source.
+              </p>
+              </div>
+          </div>
 
-                  {% set documentContents = aboutUsItem.content.document %}
-                  {% set documentChildClassName = 'feature-description' %}
-                  {% include "formatters/document.html.njk" %}
-               </div>
-            </div>
+          <div class="col-md-4 col-sm-12 feature-column">
+              <div class="feature-icon">
+                <i class="icon-wallet size-2x highlight"></i>
+                <i class="icon-wallet back-icon"></i>
+              </div>
+              <div class="feature-info">
+                <h4>SISTEM PPOB</h4>
 
-         {% set itemIdx = itemIdx + 1 %}
-         {% endfor %}
+                <p class="feature-description">
+                  Kami memiliki pengalaman lebih dari 14 tahun dalam pengembangan sistem transaksi PPOB. Kami juga telah dipercaya oleh beberapa authorized dealer operator telekomunikasi terkemuka.
+              </p>
+              </div>
+          </div>
+
+          <div class="col-md-4 col-sm-12 feature-column">
+              <div class="feature-icon">
+                <i class="icon-settings size-2x highlight"></i>
+                <i class="icon-settings back-icon"></i>
+              </div>
+              <div class="feature-info">
+                <h4>SOFTWARE DEVELOPER</h4>
+
+                <p class="feature-description">
+                  Aplikasi berbasis web, desktop, dan tentu saja trend penerapan aplikasi mobile yang anda butuhkan dapat kami kembangkan sesuai dengan kebutuhan anda.
+              </p>
+              </div>
+          </div>
+
+        </div><div class="row wow fadeInUp">
+
+          <div class="col-md-4 col-sm-12 feature-column">
+              <div class="feature-icon">
+                <i class="icon-cloud-upload size-2x highlight"></i>
+                <i class="icon-cloud-upload back-icon"></i>
+              </div>
+              <div class="feature-info">
+                <h4>DATACENTER OPERATION</h4>
+
+                <p class="feature-description">
+                  Anda butuh vendor untuk menyimpan server-server aplikasi anda secara offsite? Bare metal, virtual machine, containerization, kubernetes?
+              </p>
+              </div>
+          </div>
+
+          <div class="col-md-4 col-sm-12 feature-column">
+              <div class="feature-icon">
+                <i class="icon-energy size-2x highlight"></i>
+                <i class="icon-energy back-icon"></i>
+              </div>
+              <div class="feature-info">
+                <h4>INTERKONEKSI VPN</h4>
+
+                <p class="feature-description">
+                  Anda memiliki banyak site yang ingin dihubungkan melalui VPN? Dengan dukungan kami, site-site anda akan terkoneksi dengan fitur auto-failover multilink VPN kami.
+              </p>
+              </div>
+          </div>
+
+          <div class="col-md-4 col-sm-12 feature-column">
+              <div class="feature-icon">
+                <i class="icon-eyeglasses size-2x highlight"></i>
+                <i class="icon-eyeglasses back-icon"></i>
+              </div>
+              <div class="feature-info">
+                <h4>KONSULTAN TEKNOLOGI</h4>
+
+                <p class="feature-description">
+                  Percayakan perencanaan penerapan teknologi di perusahaan anda ke kami. Pengalaman kami dalam menerapkan berbagai macam teknologi, khususnya di bidang Teknologi Informasi, menjadikan kami layak mendampingi anda dalam menerapkan teknologi.
+              </p>
+              </div>
+          </div>
 
          </div>
       </div>
@@ -364,7 +425,7 @@
                </p>
             </div>
             <div class="col-md-6 wow fadeInUp about-text">
-               {# <!--    
+               {# <!--
                <div class="video-container">
                   <iframe src="http://player.vimeo.com/video/115919099?title=0&amp;byline=0&amp;portrait=0&amp;color=fff" allowfullscreen></iframe>
                </div>
@@ -506,11 +567,11 @@
          {% set itemIdx = 0 %}
          {% for whatWeDoItem in whatWeDoItems %}
          {% set itemIdxInRow = (itemIdx % 3) %}
-         
+
          {% if itemIdx !== 0 and itemIdxInRow === 0 %}
-         </div><div class="row wow fadeInUp"> 
+         </div><div class="row wow fadeInUp">
          {% endif %}
-            
+
             <div class="col-md-4 col-sm-12 feature-column">
                <div class="feature-icon">
                   <i class="{{ whatWeDoItem.iconClass or 'icon-check-circle'}} size-2x highlight"></i>
@@ -523,10 +584,10 @@
                   {% include "formatters/document.html.njk" %}
                </div>
             </div>
-         
+
          {% set itemIdx = itemIdx + 1 %}
          {% endfor %}
-               
+
          </div>
       </div>
    </section>
@@ -554,7 +615,7 @@
                      {% if client.webUrl %}</a>{% endif %}
                   </div>
                   {% endfor %}
-                  
+
                </div>
             </div>
          </div>
